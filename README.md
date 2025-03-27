@@ -18,10 +18,12 @@ val scrollState = rememberScrollState() // or rememberLazyListState()
 
 DynamicTitleView(
     scrollState = scrollState,
-    data = TitleData(
-        firstImage = ImageData(Icons.Default.Info),
+    data = TitleData( //It can also be used partially.
+        firstImage = ImageData(Icons.Default.Call),
+        secondImage = ImageData(Icons.Default.Info),
+        firstText = "Hello",
         secondText = "Information",
-    )
+    ),
 )
 
 // if rememberScrollState is used
