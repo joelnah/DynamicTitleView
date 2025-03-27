@@ -63,7 +63,7 @@ publishing {
             register<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "com.github.joelnah"
-                artifactId = ""
+                artifactId = "DynamicTitleView"
                 version = JavaVersion.VERSION_11.name
             }
         }

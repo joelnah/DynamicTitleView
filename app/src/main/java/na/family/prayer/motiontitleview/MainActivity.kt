@@ -42,20 +42,20 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    val scroll = rememberScrollState()
+    val scrollState = rememberScrollState()
     Column(
         modifier = modifier,
     ) {
 
         DynamicTitleView(
-            scrollState = scroll,
+            scrollState = scrollState,
             data = TitleData(
                 firstImage = ImageData(Icons.Default.Info),
                 secondText = "Information",
             ),
         )
         Column(
-            modifier = Modifier.verticalScroll(scroll),
+            modifier = Modifier.verticalScroll(scrollState),
         ) {
             repeat(30){
                 Text(
